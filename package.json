@@ -1,0 +1,26 @@
+{
+  "name": "test-task",
+  "version": "1.0.0",
+  "description": "AbSoftTask",
+  "main": "dbTask2.js",
+  "dependencies": {
+    "chai": "^4.0.0-canary.2",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "mocha": "^8.3.2"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/micjuen/Test-task.git"
+  },
+  "author": "MicJuen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/micjuen/Test-task/issues"
+  },
+  "homepage": "https://github.com/micjuen/Test-task#readme"
+}
