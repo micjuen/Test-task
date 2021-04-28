@@ -1,14 +1,16 @@
 const assert = require('chai').assert;
 // const task1 = require('../task1');
 // const task3 = require('../task3');
+const subTask1= require('../dbTask2').wholePopulation;
+const subTask2= require('../dbTask2').sum;
 
 describe('Task2', function(){
-    it('Task2_subTask1 should return True', function(){
-        let result = require('../dbTask2').subTask1;
-        assert.equal(result, 'True');
+    it('wholePopulation should be lower than 2000000000', function(){
+        let result = subTask1;
+        assert.isBelow(result, 2000000000);
     });
-    it('Task2_subTask2 should return True', function(){
-        let result = require('../dbTask2').subTask2;
-        assert.equal(result, 'True');
+    it('sum should be lower than 50', function(){
+        let result = subTask2;
+        assert.isBelow(result, 50);
     });
 });
