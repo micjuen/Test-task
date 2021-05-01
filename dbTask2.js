@@ -6,6 +6,13 @@ db.serialize(function() {
     });
     db.all("SELECT Country,Population,Area FROM Countries", function(err, rows){
       var wholePopulation= rows[0].Population+rows[1].Population+rows[2].Population+rows[3].Population;
+
+      var whole = function(wholePopulation) {
+        return wholePopulation < 2000000000 ? "1" : wholePopulation;
+      };
+      module.exports = whole;
+
+
       if(wholePopulation>=2000000000){
         console.log("\nОбщее население всех 4х стран больше 2 млрд человек : "+wholePopulation);
       }else{
@@ -17,11 +24,7 @@ db.serialize(function() {
     }else{
       console.log("Плотность населения "+rows[2].Country+" больше 50 чел./кв.км. "+ sum)
     }
-    module.exports = {
-      wholePopulation,
-      sum,
-    }
+    console.log("ВОТ: "+wholePopulation+"\n И ВОТ:"+sum)
 });
-
 });
 db.close();
