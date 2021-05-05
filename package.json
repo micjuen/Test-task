@@ -5,9 +5,11 @@
   "main": "dbTask2.js",
   "dependencies": {
     "chai": "^4.0.0-canary.2",
+    "selenium-webdriver": "*",
     "sqlite3": "^5.0.2"
   },
   "devDependencies": {
+    "chromedriver": "^90.0.0",
     "mocha": "^8.3.2"
   },
   "scripts": {
